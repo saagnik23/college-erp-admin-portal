@@ -27,7 +27,7 @@ import { fetchStudents, createStudentApi } from './services/studentService';
 import { getVerifiedSession, clearSession } from './utils/authSecurity';
 
 export default function App() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
   const [currentUser, setCurrentUser] = useState(null);
   const [activeTab, setActiveTab] = useState('overview');
 

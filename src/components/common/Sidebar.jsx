@@ -67,17 +67,17 @@ export default function Sidebar({ activeTab, setActiveTab, currentUser, onLogout
             <button
               key={item.id}
               onClick={() => setActiveTab(item.id)}
-              className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-medium transition-all text-left ${
+              className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs transition-all text-left ${
                 isActive
-                  ? 'bg-[#a855f7] text-white font-bold shadow-[0_0_12px_rgba(168,85,247,0.35)]'
-                  : 'text-gray-300 hover:text-white hover:bg-white/5'
+                  ? 'bg-white text-blue-600 border-2 border-blue-600 font-bold shadow-sm'
+                  : 'text-zinc-600 hover:text-zinc-950 hover:bg-zinc-50 border-2 border-transparent font-medium'
               }`}
             >
               <div className="flex items-center gap-3">
-                <Icon className={`w-4 h-4 ${isActive ? 'text-white' : 'text-gray-400'}`} />
-                <span>{item.label}</span>
+                <Icon className={`w-4 h-4 ${isActive ? 'text-blue-600' : 'text-zinc-400'}`} />
+                <span className={isActive ? 'text-blue-600' : ''}>{item.label}</span>
               </div>
-              {isActive && <ChevronRight className="w-4 h-4 text-white" />}
+              {isActive && <ChevronRight className="w-4 h-4 text-blue-600 stroke-[2.5]" />}
             </button>
           );
         })}
